@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Midiong Careers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        #banner {
+         width:100%;
+         height:360px;
+         object-fit:cover;
+         }
+    </style>
+</head>
+<body>
+<div class="container">
+<h1 class="text-center mt-2 mb-4"> Midiong careers</h1>
+<img id="banner" src="http://127.0.0.1:5000/static/banner.jpg" height="320">
+<h2 class="text-center  mt-2 mb-4">About Midiong</h2>
+<p class="lead">
+    It is a long established fact that a reader will be distracted by the readable content of a
+    page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+    normal distribution of letters, as opposed to using 'Content here, content here',
+    making it look like readable English
+</p>
+<h2>Open Positions</h2>
+<div>
+    {% for job in jobs %}
+        {% include 'jobitem.html' %}
+    {% endfor %}
+</div>
+<div  class="text-center">
+    <button class="btn btn-primary btn-lg"> Contact us </button>
+</div>
+</div>
+</body>
+</html>
